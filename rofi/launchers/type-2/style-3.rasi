@@ -1,0 +1,164 @@
+/**
+ *
+ * Author : Aditya Shakya (adi1090x)
+ * Github : @adi1090x
+ * 
+ * Rofi Theme File
+ * Rofi Version: 1.7.3
+ **/
+
+/*****----- Configuration -----*****/
+configuration {
+	modi:                       "drun";
+    show-icons:                 true;
+    display-drun:               "";
+	drun-display-format:        "{name}";
+}
+
+/*****----- Global Properties -----*****/
+@import                          "shared/colors.rasi"
+@import                          "shared/fonts.rasi"
+
+/*****----- Main Window -----*****/
+window {
+    transparency:                "real";
+    location:                    north;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       820px;
+    x-offset:                    0px;
+    y-offset:                    0px;
+
+    enabled:                     true;
+    margin:                      10px;
+    padding:                     0px;
+    border:                      1px solid;
+    border-radius:               12px;
+    border-color:                @selected;
+    background-color:            @background;
+    cursor:                      "default";
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    spacing:                     0px;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               0px 0px 0px 0px;
+    border-color:                @background;
+    background-color:            transparent;
+    children:                    [ "inputbar", "listview" ];  /* CHANGED: back to "inputbar", no custom "title" */
+}
+
+/*****----- Inputbar (now just shows the title text) -----*****/
+inputbar {
+    enabled:                     true;
+    spacing:                     0px;
+    margin:                      0px;
+    padding:                     15px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @background;
+    background-color:            @background;
+    text-color:                  @foreground;
+    children:                    [ "prompt" ];   /* CHANGED: only "prompt", no "entry" */
+}
+
+prompt {
+    enabled:                     true;            /* CHANGED: was false */
+    background-color:            inherit;
+    text-color:                  inherit;
+    str:                         "Wallpaper";      /* CHANGED: new — sets the displayed text */
+    font:                        "sans bold 12";   /* CHANGED: new */
+}
+textbox-prompt-colon {
+    enabled:                     false;
+    expand:                      false;
+    str:                         "::";
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     4;
+    lines:                       1;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    
+    spacing:                     0px;
+    margin:                      0px;
+    padding:                     10px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @selected;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      "default";
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    spacing:                     4px;
+    margin:                      0px;
+
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @selected;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    orientation:                 vertical;
+    cursor:                      pointer;
+}
+element normal.normal {
+    background-color:            @background;
+    text-color:                  @foreground;
+    size:                        180px;
+}
+element selected.normal {
+    background-color:            @selected;
+    text-color:                  @foreground;
+    border:                      0px 0px 4px 0px;
+    border-color:                @selected;
+    border-radius:               8px;
+}
+element-icon {
+    background-color:            transparent;
+    text-color:                  inherit;
+    size:                        150px;
+    cursor:                      inherit;
+}
+element-text{
+    enabled:                     true;
+    background-color:            transparent;
+    text-color:                  inherit;
+    horizontal-align:            1.0;    /* CHANGED: was 0.0 — now right-aligned */
+    vertical-align:              0.5;
+    font:                        "sans 8";
+}
+
+/*****----- Message -----*****/
+error-message {
+    padding:                     15px;
+    border:                      2px solid;
+    border-radius:               12px;
+    border-color:                @selected;
+    background-color:            @background;
+    text-color:                  @foreground;
+}
+textbox {
+    background-color:            @background;
+    text-color:                  @foreground;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+    highlight:                   none;
+}

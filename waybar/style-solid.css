@@ -1,0 +1,210 @@
+@import "colors/gruvbox-material.css";
+
+* {
+    all: unset;
+    font-family: "JetBrainsMono Nerd Font", monospace;
+}
+
+window#waybar {
+    background-color: @bg_gruv;
+    border-radius: 0px;
+
+}
+
+
+#clock {
+    color: @fg;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    margin-right: 7px;
+    margin-left: 2px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 700;
+    font-size: 1.0rem;
+    background: @bg3;
+}
+
+#workspaces {
+    font-size: 1.0rem;
+    font-weight: 700;
+    padding: 4px 8px;
+    margin: 6px 10px;
+    border-radius: 5px;
+    background: @bg3;
+}
+
+#workspaces button {
+    background-color: lighter(@bg4);
+    padding: 0px 20px;
+    border-radius: 5px;
+    margin: 2px 2px;
+    color: lighter(@bg4)
+}
+
+#workspaces button.active {
+    background-color: @yellow;
+    min-width: 1.2rem;
+    border-radius: 5px;
+    color: @bg_dim;
+    min-width: 32px;
+}
+
+#battery {
+    color: @fg;
+    margin-left: 8px;
+
+    margin-top: 7px;
+    margin-bottom: 7px;
+
+    border-radius: 5px;
+
+    padding-left: 5px;
+    padding-right: 10px;
+
+    font-weight: 600;
+    font-size: 1.1rem;
+    background: @bg4;
+}
+
+#battery.charging {
+    color: lighter(@aqua1);
+    margin-left: 8px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    border-radius: 5px;
+    padding-left: 1px;
+    padding-right: 10px;
+    font-size: 1.2rem;
+    background: darker(alpha(@aqua, 0.6));
+}
+
+#battery.warning {
+    color: @white1;
+    margin-left: 8px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 10px;
+    font-weight: 700;
+    font-size: 1.0rem;
+    background: alpha(darker(@yellow), 0.6);
+}
+
+
+#pulseaudio {
+    color: lighter(@aqua1);
+    margin-top: 7px;
+    margin-left: 7px;
+    margin-bottom: 7px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 700;
+    font-size: 1.0rem;
+    background: alpha(darker(@aqua), 0.6);
+
+}
+
+
+#pulseaudio.muted {
+    color: @bg_dim;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 700;
+    font-size: 1.0rem;
+    background: alpha(@red, 0.8);
+
+}
+
+#network {
+    font-size: medium;
+    font-weight: 700;
+
+    color: lighter(@blue1);
+    background: alpha(@blue, 0.6);
+
+    padding-left: 12px;
+    padding-right: 12px;
+
+    margin-top: 7px;
+    margin-bottom: 7px;
+
+    margin-right: 8px;
+    margin-left: 10px;
+
+
+    border-radius: 5px;
+}
+
+#network.disconnected {
+    font-size: medium;
+
+    color: @bg_dim;
+    background: alpha(@red, 0.8);
+
+    padding-left: 12px;
+    padding-right: 12px;
+
+    margin-top: 7px;
+    margin-bottom: 7px;
+
+    border-radius: 5px;
+}
+
+.modules-right {
+    padding: 0 10 0 10;
+    border-radius: 5px;
+
+    font-size: 1.2rem;
+    margin-right: 0px;
+    font-weight: 700
+}
+
+
+.modules-left {
+    background-color: transparent;
+    padding-right: 10px;
+    
+    border-radius: 5px;
+
+    font-size: 1.2rem;
+    margin-right: 5px;
+}
+
+#bluetooth {
+    padding-right: 20px;
+    color: lighter(@blue1);
+    background: alpha(@blue, 0.6);
+
+    padding-left: 12px;
+    padding-right: 12px;
+
+    margin-top: 7px;
+    margin-bottom: 7px;
+
+    margin-right: 0px;
+
+    border-radius: 5px;
+}
+
+#bluetooth.disabled {
+    padding-right: 20px;
+    color: @bg_dim;
+    background: alpha(@red, 0.8);
+
+    padding-left: 12px;
+    padding-right: 12px;
+
+    margin-top: 7px;
+    margin-bottom: 7px;
+
+    margin-right: 0px;
+
+    border-radius: 5px;
+}
